@@ -1,3 +1,4 @@
+//https://food-sequence.vercel.app/admin 접속 이후 코드 실행(취약점)
 async function setBoxToDeparture(id = "1-2") { //알아서 바꿔서 쓰세요 야르
   const GET_URL = "https://food-sequence.vercel.app/api/boxes?" + Date.now();
   const POST_URL = "https://food-sequence.vercel.app/api/boxes";
