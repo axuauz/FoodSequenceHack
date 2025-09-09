@@ -1,0 +1,19 @@
+#hack-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  padding: 10px 20px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#hack-button:disabled {
+  background-color: #cccccc;
+  color: black;
+  cursor: not-allowed;
+}
