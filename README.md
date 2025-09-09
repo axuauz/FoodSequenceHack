@@ -4,10 +4,11 @@
 
 ## Installation
 
-1. 파일 다운받기 zip 상태면 압축풀기
-2. `chrome://extensions/`로 이동하기
-3. 우측 상단 '개발자 모드' 활성화하기
-4. "Load unpacked" 누르고 `FoodSequenceHack` 폴더 선택하기
+1. 초록색 코드->zip로 다운로드
+2. zip 압축풀기
+3. `chrome://extensions/`로 이동하기
+4. 우측 상단 '개발자 모드' 활성화하기
+5. "Load unpacked" 누르고 `FoodSequenceHack` 폴더 선택하기
 
 ## License
 
