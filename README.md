@@ -1,6 +1,6 @@
-# my-chrome-extension
+# Food Sequence HACK
 
-Food Sequence HACK
+민주컷
 
 ## Installation
 
