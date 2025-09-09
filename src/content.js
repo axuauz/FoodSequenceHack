@@ -1,8 +1,40 @@
-function checkAndCreateButton() {
+function checkAndCreateButtons() {
   if (window.location.pathname.endsWith('/admin')) {
     if (!document.getElementById('hack-button')) {
       createHackButton();
     }
+    if (!document.getElementById('unblock-context-button')) {
+      createUnblockContextButton();
+    }
+  }
+}
+
+function createUnblockContextButton() {
+  const button = document.createElement('button');
+  button.id = 'unblock-context-button';
+  button.textContent = '우클릭 차단 해제하기';
+  document.body.appendChild(button);
+
+  button.addEventListener('click', () => {
+    const script = document.createElement('script');
+    script.textContent = `
+      document.addEventListener('contextmenu', function (e) {
+        e.stopPropagation();
+      }, true);
+      document.oncontextmenu = null;
+    `;
+    document.documentElement.appendChild(script);
+    script.remove();
+    
+    alert("예아");
+    button.disabled = true;
+    button.textContent = '이지하노';
+  });
+
+  // 기존 hack-button의 왼쪽에 배치
+  const hackButton = document.getElementById('hack-button');
+  if (hackButton) {
+    hackButton.parentNode.insertBefore(button, hackButton);
   }
 }
 
@@ -28,10 +60,10 @@ function createHackButton() {
   });
 }
 
-checkAndCreateButton();
+checkAndCreateButtons();
 
 const observer = new MutationObserver(() => {
-  checkAndCreateButton();
+  checkAndCreateButtons();
 });
 
 observer.observe(document.body, {
@@ -39,6 +71,6 @@ observer.observe(document.body, {
   subtree: true
 });
 
-window.addEventListener('popstate', checkAndCreateButton);
-window.addEventListener('pushstate', checkAndCreateButton);
-window.addEventListener('replacestate', checkAndCreateButton);
+window.addEventListener('popstate', checkAndCreateButtons);
+window.addEventListener('pushstate', checkAndCreateButtons);
+window.addEventListener('replacestate', checkAndCreateButtons);
