@@ -10,6 +10,12 @@
 4. 우측 상단 '개발자 모드' 활성화하기
 5. "Load unpacked" 누르고 `FoodSequenceHack` 폴더 선택하기
 
+## How to Use
+1. https://food-sequence.vercel.app 접속
+2. `관리자 페이지` 버튼 누르기
+3. 우측 하단 버튼 누르기
+4. 야르
+
 ## License
 
 axuauz 박재준 A.C.T(KE)
