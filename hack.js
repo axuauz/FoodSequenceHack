@@ -14,7 +14,7 @@ async function setBoxToDeparture(id = "1-2") { //알아서 바꿔서 쓰세요 �
   if (!data.success || !Array.isArray(data.boxes)) {
     throw new Error("서버 응답에 boxes가 없음");
   }
-
+//waiting, departure, finished, queue
   const boxes = data.boxes.map((b) =>
     b.id === id
       ? {
